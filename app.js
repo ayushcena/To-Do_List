@@ -20,6 +20,7 @@ const item3=new Item({
     name:"Welcome Item3",
 });
 const d=[item1,item2,item3];
+
 /*
 Item.insertMany(d, function(err)
 {
@@ -31,6 +32,8 @@ Item.insertMany(d, function(err)
     }
 });
 */
+
+
 app.get("/",function(req,res)
 {
     //res.send("Hey guys");
@@ -56,6 +59,8 @@ app.get("/",function(req,res)
         }
     })
 });
+
+
 app.post("/",function(req,res)
 {
     const itemName=req.body.n;
@@ -68,6 +73,8 @@ app.post("/",function(req,res)
     });
 item.save();
 });
+
+
 app.post("/delete",function(req,res)
 {
     //console.log(req.body.checkbox);
